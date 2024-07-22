@@ -25,7 +25,7 @@ import plotly.graph_objects as go
 cities = ['Athens', 'Corfu', 'Crete', 'Zante', 'Mykonos']
 def get_airport_codes(city):
     api_url = 'https://api.api-ninjas.com/v1/airports?city={}'.format(city)
-    headers = {'X-Api-Key': 'nrc3S/XZWbfao3LeySY9hg==I1u1i9JSOP6NSPFw'}
+    headers = {'X-Api-Key': 'API-KEY-NINJAS'}
  
     response = requests.get(api_url, headers=headers)
     if response.status_code == requests.codes.ok:
@@ -66,8 +66,8 @@ def get_access_token():
     }
     data = {
         "grant_type": "client_credentials",
-        "client_id": 'gAJOLRiyFCjYVuCEIspShbBroNVLSgpw',
-        "client_secret": 'ZDHiCX0h0NYIBm0B'
+        "client_id": 'API-ID-AMADEUS',
+        "client_secret": 'API-SECRET-AMADEUS'
     }
  
     response = requests.post(url, headers=headers, data=data)
@@ -408,7 +408,7 @@ plotly_div = Div(text=plotly_html, width=800, height=600)
 
 
 # WeatherAPI key
-weather_key = "11da115d9a8d4556bd993522240506"
+weather_key = "API-WEATHER"
 
 # Function to fetch weather data for the next 10 days for a single city
 def fetch_10_day_forecast(city, api_key):
